@@ -1,0 +1,68 @@
+Amavera
+Privacy Policy
+Effective date: April 23, 2026
+
+Amavera is a mobile application that helps tenants document the condition of a rental property through AI-guided photo capture and automated report generation. This policy explains what data we collect, why we collect it, and how we protect it.
+
+1. What We Collect
+Account information. When you create an account, we collect your email address and a password. Your password is hashed before storage and is never stored in plain text.
+
+Property address. You provide a street address and city/state/zip when starting an inspection. This appears on your report and is stored alongside your inspection data.
+
+Photos. During an inspection, you capture photos of the property using your phone's camera. These photos are uploaded to our servers for AI analysis and are stored as part of your inspection record.
+
+Inspection data. Our AI analyzes your photos to identify rooms, detect fixtures, assess conditions, and generate a written report. The analysis results, the generated report, and associated metadata (timestamps, coverage state, confidence signals) are stored in your account.
+
+Payment information. Payments are processed entirely through Google Play's billing system. We do not collect, store, or have access to your credit card number, billing address, or other payment details. We receive a purchase confirmation token from Google Play, which we verify through RevenueCat (our payment verification provider) and store as proof of purchase.
+
+Email communications. If you have a paid report, we may send you occasional emails related to your inspection (for example, a reminder that your lease end date may be approaching). These emails are sent through Resend, our email delivery provider.
+
+2. How We Use Your Data
+We use your data to operate Amavera and deliver the service you signed up for:
+
+To analyze your photos and generate your inspection report
+To store your inspections so you can access them later
+To process your payment and unlock your report
+To cryptographically seal your finalized report so its integrity can be independently verified
+To send you emails related to your inspection
+We do not use your data to train AI models. We do not sell your data to third parties. We do not serve advertising.
+
+3. Third-Party Services
+Amavera relies on the following third-party services to operate. Each processes some of your data as described:
+
+Anthropic (Claude AI) — Your photos are sent to Anthropic's API for analysis. Anthropic processes the images to produce room identification, condition observations, and report text. Anthropic's API does not retain your data for model training under their commercial terms.
+Supabase — Stores your account, inspection data, photos, and reports. Supabase runs on AWS infrastructure with encryption at rest and in transit.
+Railway — Hosts our backend server that coordinates the inspection pipeline.
+Google Play Billing — Processes your payment. Google's privacy policy governs their handling of your payment information.
+RevenueCat — Verifies purchase tokens from Google Play. RevenueCat receives your purchase token and app user ID, not your payment details.
+Resend — Delivers emails to your email address. Resend processes your email address and the email content.
+FreeTSA — A cryptographic timestamping authority. We submit a hash (a mathematical fingerprint) of your finalized report to FreeTSA to obtain a signed timestamp proving when the report was sealed. FreeTSA receives only the hash, not the report itself or any personal information.
+4. Data Storage and Security
+Your data is stored in Supabase's managed PostgreSQL database and S3-compatible object storage, hosted on AWS infrastructure. All data is encrypted in transit (TLS/HTTPS) and at rest. Access to your inspection data is restricted by row-level security — you can only access your own inspections.
+
+Photos are stored in a private storage bucket and accessed through time-limited signed URLs. They are not publicly accessible.
+
+Your password is hashed using Supabase Auth's built-in hashing before storage. We cannot read your password.
+
+5. Data Retention
+Your account, inspections, photos, and reports are retained as long as your account exists. Inspection reports are designed to be long-term records — tenants may need them months or years after move-in — so we do not automatically delete them.
+
+If you delete an unpaid, unfinalized inspection through the app, the inspection record and its associated photos are permanently deleted.
+
+If you want your account and all associated data deleted, contact us at the email address below and we will process your request within 30 days.
+
+6. Your Rights
+You can request access to, correction of, or deletion of your personal data by contacting us. If you are located in a jurisdiction with specific data protection rights (such as the EU under GDPR or California under CCPA), those rights apply to you and we will honor them.
+
+7. Children's Privacy
+Amavera is not intended for use by anyone under the age of 18. We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us and we will delete it.
+
+8. Changes to This Policy
+We may update this privacy policy from time to time. If we make material changes, we will notify you through the app or by email. The effective date at the top of this page indicates when this policy was last revised.
+
+9. Contact
+If you have questions about this privacy policy or your data, contact us at:
+
+privacy@amavera.app
+
+© 2026 Amavera. All rights reserved.
